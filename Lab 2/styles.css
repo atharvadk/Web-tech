@@ -43,27 +43,6 @@ h2.heading {
 
 
 
-.paragraph {
-    margin-bottom: 20px;
-}
-
-.list {
-    margin-bottom: 20px;
-}
-
-.list-item {
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-ol {
-    list-style: decimal;
-    padding-left: 20px;
-}
 
 .logo img {
     height: 50px;
