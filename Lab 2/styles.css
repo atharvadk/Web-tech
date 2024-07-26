@@ -47,7 +47,9 @@ h2.heading {
     margin-bottom: 20px;
 }
 
-/* Lists */
+.list {
+    margin-bottom: 20px;
+}
 
 .list-item {
     margin-bottom: 10px;
