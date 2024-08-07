@@ -1,0 +1,53 @@
+{
+    "destinations": [
+        {
+            "image": "destination1.jpg",
+            "title": "Top Destination 1",
+            "description": "Discover the most beautiful places in the world"
+        },
+        {
+            "image": "destination2.jpg",
+            "title": "Top Destination 2",
+            "description": "Discover the most beautiful places in the world"
+        },
+        {
+            "image": "destination3.jpg",
+            "title": "Top Destination 3",
+            "description": "Discover the most beautiful places in the world"
+        }
+    ],
+    "tours": [
+        {
+            "image": "tour1.jpg",
+            "title": "Exclusive Tour 1",
+            "description": "Handpicked tours for an unforgettable experience"
+        },
+        {
+            "image": "tour2.jpg",
+            "title": "Exclusive Tour 2",
+            "description": "Handpicked tours for an unforgettable experience"
+        },
+        {
+            "image": "tour3.jpg",
+            "title": "Exclusive Tour 3",
+            "description": "Handpicked tours for an unforgettable experience"
+        }
+    ],
+    "blogs": [
+        {
+            "image": "blog1.jpg",
+            "title": "Travel Blog 1",
+            "description": "Read inspiring stories and tips"
+        },
+        {
+            "image": "blog2.jpg",
+            "title": "Travel Blog 2",
+            "description": "Read inspiring stories and tips"
+        },
+        {
+            "image": "blog3.jpg",
+            "title": "Travel Blog 3",
+            "description": "Read inspiring stories and tips"
+        }
+    ]
+}
