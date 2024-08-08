@@ -39,7 +39,7 @@ body {
 }
 
 .nav a:hover {
-    color: #ffb703;
+    color: #0077b6;
 }
 
 .video-section {
@@ -81,7 +81,7 @@ body {
 }
 
 .search-bar button {
-    background: #007bff;
+    background: #0077b6;
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -120,6 +120,9 @@ body {
     margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
 .card:hover {
@@ -144,6 +147,18 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
+
+.read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #0077b6;
+    border-radius: 5px;
+}
+
 
 button:hover {
     background-color: #ffb703;

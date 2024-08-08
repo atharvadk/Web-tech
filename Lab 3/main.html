@@ -15,7 +15,7 @@
             <div class="row align-items-center">
                 <div class="col-4">
                     <div class="logo">
-                        <img src="https://via.placeholder.com/100x50?text=Travel+Guide+Logo" alt="Travel Guide Logo">
+                        <img src="pics/logo.jpg" alt="Travel Guide Logo">
                     </div>
                 </div>
                 <div class="col-8">
@@ -72,7 +72,6 @@
                 <button class="btn btn-primary">Contact Now</button>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -80,15 +79,22 @@
     </footer>
 
     <script>
-
         function createCard(image, title, description) {
+            const charLimit = 150; // Character limit for the card content
+            const truncatedDescription = description.length > charLimit ? description.substring(0, charLimit) + '...' : description;
+            const fullDescription = description;
+
             return `
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="${image}" class="card-img-top" alt="${title}">
                         <div class="card-body">
                             <h5 class="card-title">${title}</h5>
-                            <p class="card-text">${description}</p>
+                            <p class="card-text">
+                                <span class="truncated">${truncatedDescription}</span>
+                                <span class="full-text" style="display:none;">${fullDescription}</span>
+                                
+                            </p>
                             <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
@@ -117,6 +123,8 @@
                 data.blogs.forEach(blog => {
                     blogContent.innerHTML += createCard(blog.image, blog.title, blog.description);
                 });
+
+
             })
             .catch(error => console.error('Error fetching data:', error));
     </script>

@@ -1,19 +1,34 @@
 {
     "destinations": [
         {
-            "image": "destination1.jpg",
-            "title": "Top Destination 1",
-            "description": "Discover the most beautiful places in the world"
+            "image": "pics/paris.jpeg",
+            "title": "Paris",
+            "description": "As the world's best place to visit, it's no surprise that the electrifying City of Light tops this list. France's capital city is a year-round tourist destination with iconic attractions like the Louvre and the Eiffel Tower and incredible architecture (think: the dazzling Basilique du Sacré-Coeur)."
         },
         {
-            "image": "destination2.jpg",
-            "title": "Top Destination 2",
-            "description": "Discover the most beautiful places in the world"
+            "image": "pics/nice.jpeg",
+            "title": "Nice",
+            "description": "Glamorous Nice occupies a picturesque spot along the French Riviera. Beach bums and culture hounds alike will enjoy the city's pebbly shores, engaging museums, boutique shops and Baroque-style palaces."
         },
         {
-            "image": "destination3.jpg",
-            "title": "Top Destination 3",
-            "description": "Discover the most beautiful places in the world"
+            "image": "pics/burgundy.jpeg",
+            "title": "Burgundy",
+            "description": "Another popular wine region, Burgundy is home to rolling hills, superior cuisine and an array of vineyards. Those visiting Burgundy must spend time exploring the medieval villages, historical abbeys and museums that call this area home."
+        },
+        {
+            "image": "pics/toulouse.jpeg",
+            "title": "Toulouse",
+            "description": "Dubbed la Ville Rose (the Pink City) due to the prominence of distinctive clay bricks in its architecture, Toulouse is a feast for the eyes. Throughout this city, which is located in the South of France, you'll find marvels like the neoclassical Le Capitole on the main square, the stately Basilica of Saint-Sernin (an 11th-century UNESCO site)"
+        },
+        {
+            "image": "pics/eze.jpeg",
+            "title": "Eze",
+            "description": "Located on the French Riviera about 8 miles east of Nice, the tiny hilltop village of Èze makes for an excellent day trip. The best way to spend your time in this medieval town is meandering through its cobbled streets that look as though they've been pulled from a postcard."
+        },
+        {
+            "image": "pics/lyon.jpeg",
+            "title": "Lyon",
+            "description": "While it may not be as well-known as big-name cities like Paris, Lyon competes with the best of them. Despite being the third-largest city in France, Lyon is much calmer and less touristy than other similarly sized destinations."
         }
     ],
     "tours": [
