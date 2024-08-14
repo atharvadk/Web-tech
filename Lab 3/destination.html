@@ -7,6 +7,7 @@
     <title>Destination - Travel Guide</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,10 +30,12 @@
     </header>
 
     <main>
-        <section id="destination-details" class="container">
-            <h2 id="destination-title"></h2>
-            <img id="destination-image" src="" alt="" class="img-fluid">
-            <p id="destination-description"></p>
+        <section id="destination-details" class="destination-section">
+            <div class="destination-overlay"></div>
+            <div class="destination-content">
+                <h2 id="destination-title"></h2>
+                <p id="destination-description"></p>
+            </div>
         </section>
     </main>
 
@@ -55,8 +58,8 @@
 
                 if (destination) {
                     document.getElementById('destination-title').innerText = destination.title;
-                    document.getElementById('destination-image').src = destination.image;
                     document.getElementById('destination-description').innerText = destination.description;
+                    document.querySelector('.destination-section').style.backgroundImage = `url('${destination.image}')`;
                 } else {
                     document.getElementById('destination-details').innerHTML = '<p>Destination not found.</p>';
                 }
