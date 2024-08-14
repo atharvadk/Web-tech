@@ -93,7 +93,7 @@ body {
 }
 
 .search-bar button:hover {
-    background: rgb(0, 53, 109);
+    background: #2200ff;
 }
 
 .search-bar button i {

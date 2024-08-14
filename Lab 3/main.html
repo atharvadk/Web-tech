@@ -77,10 +77,9 @@
     </footer>
 
     <script>
-        function createCard(image, title, description, link) {
-            const charLimit = 150; // Character limit for the card content
+        function createCard(image, title, description, destination) {
+            const charLimit = 150;
             const truncatedDescription = description.length > charLimit ? description.substring(0, charLimit) + '...' : description;
-            const fullDescription = description;
 
             return `
                 <div class="col-md-4 mb-4">
@@ -90,9 +89,8 @@
                             <h5 class="card-title">${title}</h5>
                             <p class="card-text">
                                 <span class="truncated">${truncatedDescription}</span>
-                                <span class="full-text" style="display:none;">${fullDescription}</span>
                             </p>
-                            <a href="${link}" class="btn btn-primary">Learn More</a>
+                            <a href="destination.html?destination=${destination}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -103,13 +101,9 @@
             .then(response => response.json())
             .then(data => {
                 const destinationsContent = document.getElementById('destinations-content');
-                const toursContent = document.getElementById('tours-content');
-                const blogContent = document.getElementById('blog-content');
 
-                // Destinations
                 data.destinations.forEach(destination => {
-                    const link = destination.link || '#';
-                    destinationsContent.innerHTML += createCard(destination.image, destination.title, destination.description, link);
+                    destinationsContent.innerHTML += createCard(destination.image, destination.title, destination.description, destination.title);
                 });
 
                 // Tours

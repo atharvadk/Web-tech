@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination - Travel Guide</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="pics/logo.jpg" alt="Travel Guide Logo">
+                    </div>
+                </div>
+                <div class="col-8">
+                    <nav class="nav justify-content-end">
+                        <a href="main.html" class="nav-link">Home</a>
+                        <a href="main.html#destinations" class="nav-link">Destinations</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="destination-details" class="container">
+            <h2 id="destination-title"></h2>
+            <img id="destination-image" src="" alt="" class="img-fluid">
+            <p id="destination-description"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Travel Guide. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function getParameterByName(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+
+        const destinationTitle = getParameterByName('destination');
+
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const destination = data.destinations.find(d => d.title === destinationTitle);
+
+                if (destination) {
+                    document.getElementById('destination-title').innerText = destination.title;
+                    document.getElementById('destination-image').src = destination.image;
+                    document.getElementById('destination-description').innerText = destination.description;
+                } else {
+                    document.getElementById('destination-details').innerHTML = '<p>Destination not found.</p>';
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+
+</html>

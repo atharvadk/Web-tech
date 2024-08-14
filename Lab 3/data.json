@@ -66,13 +66,14 @@
         },
         {
             "image": "pics/blog2.png",
-            "title": "Travel Blog 2",
+            "title": "Me ssy Nessy Chic",
             "link": "https://www.messynessychic.com/",
             "description": "Every summer we run into the same problem: too many amazing festivals, too little time. Then we caught wind of the long lost Delphic Festivals, which makes every concert we’ve ever been to pale in comparison to its over-the-top, 1920s interpretation of Greek merrymaking. "
         },
         {
-            "image": "blog3.jpg",
-            "title": "Travel Blog 3",
+            "image": "pics/blog3.png",
+            "title": "The Provence Post",
+            "link": "https://theprovencepost.blogspot.com/",
             "description": "Read inspiring stories and tips"
         }
     ]
