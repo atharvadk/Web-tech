@@ -3,20 +3,12 @@
         {
             "image": "pics/paris.jpeg",
             "title": "Paris",
-            "link": "destinations/paris.html",
-            "attractions": [
-                "Eiffel Tower",
-                "Louvre Museum",
-                "Notre-Dame Cathedral",
-                "Montmartre"
-            ],
             "history": "Paris, the city of light, has a history that stretches back over 2,000 years. It has been a major center of culture, education, and the arts throughout its history.",
             "description": "As the world's best place to visit, it's no surprise that the electrifying City of Light tops this list. France's capital city is a year-round tourist destination with iconic attractions like the Louvre and the Eiffel Tower and incredible architecture (think: the dazzling Basilique du Sacré-Coeur)."
         },
         {
             "image": "pics/nice.jpeg",
             "title": "Nice",
-            "link": "destinations/nice.html",
             "description": "Glamorous Nice occupies a picturesque spot along the French Riviera. Beach bums and culture hounds alike will enjoy the city's pebbly shores, engaging museums, boutique shops and Baroque-style palaces."
         },
         {

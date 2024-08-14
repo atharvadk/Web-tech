@@ -101,18 +101,18 @@
             .then(response => response.json())
             .then(data => {
                 const destinationsContent = document.getElementById('destinations-content');
+                const toursContent = document.getElementById('tours-content');
+                const blogContent = document.getElementById('blog-content');
 
                 data.destinations.forEach(destination => {
                     destinationsContent.innerHTML += createCard(destination.image, destination.title, destination.description, destination.title);
                 });
 
-                // Tours
                 data.tours.forEach(tour => {
                     const link = tour.link || '#'
                     toursContent.innerHTML += createCard(tour.image, tour.title, tour.description, link);
                 });
 
-                // Blog
                 data.blogs.forEach(blog => {
                     const link = blog.link || '#';
                     blogContent.innerHTML += createCard(blog.image, blog.title, blog.description, link);
