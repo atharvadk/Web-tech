@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Info</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .destination-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .info-section {
+            margin: 20px 0;
+        }
+
+        .attractions-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .attractions-list li {
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1 id="destination-name">Destination Name</h1>
+        </header>
+
+        <img id="destination-image" class="destination-image" src="" alt="Destination Image">
+
+        <section class="info-section">
+            <h2>About the Destination</h2>
+            <p id="destination-description">Description will go here.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Top Attractions</h2>
+            <ul id="destination-attractions" class="attractions-list"></ul>
+        </section>
+
+        <section class="info-section">
+            <h2>History</h2>
+            <p id="destination-history">History will go here.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Travel Guide. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch data from data.json and populate the page
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const destination = data.destination;
+
+                // Populate the page with destination data
+                document.getElementById('destination-name').innerText = destination.name;
+                document.getElementById('destination-image').src = destination.image;
+                document.getElementById('destination-image').alt = destination.name;
+                document.getElementById('destination-description').innerText = destination.description;
+
+                const attractionsList = document.getElementById('destination-attractions');
+                destination.attractions.forEach(attraction => {
+                    const listItem = document.createElement('li');
+                    listItem.innerText = attraction;
+                    attractionsList.appendChild(listItem);
+                });
+
+                document.getElementById('destination-history').innerText = destination.history;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+
+</body>
+
+</html>
