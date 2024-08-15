@@ -37,6 +37,13 @@
                 <p id="destination-description"></p>
             </div>
         </section>
+
+        <section id="attractions" class="container my-5">
+            <h2>Main Attractions</h2>
+            <div id="attractions-list" class="row">
+                <!-- Attraction cards will be inserted here by JavaScript -->
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -60,6 +67,29 @@
                     document.getElementById('destination-title').innerText = destination.title;
                     document.getElementById('destination-description').innerText = destination.description;
                     document.querySelector('.destination-section').style.backgroundImage = `url('${destination.image}')`;
+
+                    // Generate attraction cards
+                    const attractionsList = document.getElementById('attractions-list');
+                    data.destinations.forEach(d => {
+                        if (d.title === destinationTitle) {
+                            // Assuming attractions are listed in the destination object
+                            const attractions = d.attractions || [];
+                            attractions.forEach(attraction => {
+                                const card = document.createElement('div');
+                                card.className = 'col-md-4 mb-4';
+                                card.innerHTML = `
+                                    <div class="card">
+                                        <img src="${attraction.image}" class="card-img-top" alt="${attraction.title}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${attraction.title}</h5>
+                                            <p class="card-text">${attraction.description}</p>
+                                        </div>
+                                    </div>
+                                `;
+                                attractionsList.appendChild(card);
+                            });
+                        }
+                    });
                 } else {
                     document.getElementById('destination-details').innerHTML = '<p>Destination not found.</p>';
                 }

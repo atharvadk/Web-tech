@@ -127,7 +127,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card-img-top {
@@ -137,6 +137,10 @@ body {
 
 .card-body {
     padding: 20px;
+}
+
+#attractions-list .card {
+    margin-bottom: 20px;
 }
 
 button {

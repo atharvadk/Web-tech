@@ -49,13 +49,6 @@
             </div>
         </section>
 
-        <section class="hero" id="tours">
-            <div class="container">
-                <h2 class="heading">Tours</h2>
-                <div class="row" id="tours-content"></div>
-            </div>
-        </section>
-
         <section class="hero" id="blog">
             <div class="container">
                 <h2 class="heading">Blog</h2>
@@ -96,7 +89,8 @@
                 </div>
             `;
         }
-        function createCard(image, title, description, destination) {
+
+        function createCard(image, title, description, link) {
             const charLimit = 150;
             const truncatedDescription = description.length > charLimit ? description.substring(0, charLimit) + '...' : description;
 
@@ -106,41 +100,31 @@
                         <img src="${image}" class="card-img-top" alt="${title}">
                         <div class="card-body">
                             <h5 class="card-title">${title}</h5>
-                            <p class="card-text">${description}</p>
                             <p class="card-text">
                                 <span class="truncated">${truncatedDescription}</span>
-                                <span class="full-text" style="display:none;">${fullDescription}</span>
-                                
                             </p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="${link}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    `;
+                </div>
+            `;
         }
 
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 const destinationsContent = document.getElementById('destinations-content');
-                const toursContent = document.getElementById('tours-content');
                 const blogContent = document.getElementById('blog-content');
 
                 data.destinations.forEach(destination => {
                     destinationsContent.innerHTML += createCardDest(destination.image, destination.title, destination.description, destination.title);
                 });
 
-                data.tours.forEach(tour => {
-                    toursContent.innerHTML += createCard(tour.image, tour.title, tour.description, tour.destination);
-                });
-
-                data.blog.forEach(blog => {
-                    blogContent.innerHTML += createCard(blog.image, blog.title, blog.description, blog.destination);
+                data.blogs.forEach(blog => {
+                    blogContent.innerHTML += createCard(blog.image, blog.title, blog.description, blog.link);
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
-
-
-
     </script>
 </body>
 
