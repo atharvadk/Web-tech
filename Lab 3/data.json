@@ -96,28 +96,11 @@
             "description": "While it may not be as well-known as big-name cities like Paris, Lyon competes with the best of them. Despite being the third-largest city in France, Lyon is much calmer and less touristy than other similarly sized destinations.",
             "attractions": [
                 {
-                    "image": "pics/basilica_of_notre_dame_de_fourviere.jpg",
+                    "image": "pics/62.png",
                     "title": "Basilica of Notre-Dame de Fourvière",
                     "description": "A prominent basilica located on Fourvière Hill, offering panoramic views of Lyon."
                 }
             ]
-        }
-    ],
-    "tours": [
-        {
-            "image": "tour1.jpg",
-            "title": "Exclusive Tour 1",
-            "description": "Handpicked tours for an unforgettable experience"
-        },
-        {
-            "image": "tour2.jpg",
-            "title": "Exclusive Tour 2",
-            "description": "Handpicked tours for an unforgettable experience"
-        },
-        {
-            "image": "tour3.jpg",
-            "title": "Exclusive Tour 3",
-            "description": "Handpicked tours for an unforgettable experience"
         }
     ],
     "blogs": [
