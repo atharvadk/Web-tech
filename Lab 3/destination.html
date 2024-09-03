@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination - Travel Guide</title>
+    <title>Travel Guide - Destination</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,9 +19,27 @@
                     </div>
                 </div>
                 <div class="col-8">
-                    <nav class="nav justify-content-end">
-                        <a href="main.html" class="nav-link">Home</a>
-                        <a href="main.html#destinations" class="nav-link">Destinations</a>
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#destinations" class="nav-link">Destinations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tours" class="nav-link">Tours</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#blog" class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact" class="nav-link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -30,18 +47,19 @@
     </header>
 
     <main>
-        <section id="destination-details" class="destination-section">
+        <section class="destination-section">
             <div class="destination-overlay"></div>
-            <div class="destination-content">
-                <h2 id="destination-title"></h2>
-                <p id="destination-description"></p>
+            <div class="container destination-content">
+                <h1 id="destination-title">Destination Title</h1>
+                <p id="destination-description">Destination description goes here. It provides detailed information
+                    about the location, culture, attractions, and experiences awaiting visitors.</p>
             </div>
         </section>
 
-        <section id="attractions" class="container my-5">
-            <h2>Main Attractions</h2>
-            <div id="attractions-list" class="row">
-                <!-- Attraction cards will be inserted here by JavaScript -->
+        <section class="info-section">
+            <div class="container">
+                <h2>Top Attractions</h2>
+                <ul class="attractions-list" id="attractions-list"></ul>
             </div>
         </section>
     </main>
@@ -51,51 +69,36 @@
     </footer>
 
     <script>
-        function getParameterByName(name) {
-            const url = new URL(window.location.href);
-            return url.searchParams.get(name);
-        }
-
-        const destinationTitle = getParameterByName('destination');
+        const urlParams = new URLSearchParams(window.location.search);
+        const destination = urlParams.get('destination');
 
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
-                const destination = data.destinations.find(d => d.title === destinationTitle);
+                const destinationData = data.destinations.find(dest => dest.title === destination);
 
-                if (destination) {
-                    document.getElementById('destination-title').innerText = destination.title;
-                    document.getElementById('destination-description').innerText = destination.description;
-                    document.querySelector('.destination-section').style.backgroundImage = `url('${destination.image}')`;
+                if (destinationData) {
+                    document.getElementById('destination-title').textContent = destinationData.title;
+                    document.getElementById('destination-description').textContent = destinationData.description;
 
-                    // Generate attraction cards
                     const attractionsList = document.getElementById('attractions-list');
-                    data.destinations.forEach(d => {
-                        if (d.title === destinationTitle) {
-                            // Assuming attractions are listed in the destination object
-                            const attractions = d.attractions || [];
-                            attractions.forEach(attraction => {
-                                const card = document.createElement('div');
-                                card.className = 'col-md-4 mb-4';
-                                card.innerHTML = `
-                                    <div class="card">
-                                        <img src="${attraction.image}" class="card-img-top" alt="${attraction.title}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${attraction.title}</h5>
-                                            <p class="card-text">${attraction.description}</p>
-                                        </div>
-                                    </div>
-                                `;
-                                attractionsList.appendChild(card);
-                            });
-                        }
+                    destinationData.attractions.forEach(attraction => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = attraction;
+                        attractionsList.appendChild(listItem);
                     });
                 } else {
-                    document.getElementById('destination-details').innerHTML = '<p>Destination not found.</p>';
+                    document.getElementById('destination-title').textContent = "Destination not found";
+                    document.getElementById('destination-description').textContent = "";
                 }
             })
             .catch(error => console.error('Error fetching data:', error));
     </script>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
