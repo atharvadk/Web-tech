@@ -230,3 +230,17 @@ button:hover {
     color: #fff;
     text-align: center;
 }
+
+#destination-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#destination-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+}
