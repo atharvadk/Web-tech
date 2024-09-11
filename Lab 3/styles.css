@@ -37,6 +37,10 @@ body {
     color: #1800b6;
 }
 
+.navbar-toggler {
+    margin-left: auto;
+}
+
 .video-section {
     height: 100vh;
     display: flex;

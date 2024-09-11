@@ -82,11 +82,9 @@
                     document.getElementById('destination-description').innerText = destination.description;
                     document.querySelector('.destination-section').style.backgroundImage = `url('${destination.image}')`;
 
-                    // Generate attraction cards
                     const attractionsList = document.getElementById('attractions-list');
                     data.destinations.forEach(d => {
                         if (d.title === destinationTitle) {
-                            // Assuming attractions are listed in the destination object
                             const attractions = d.attractions || [];
                             attractions.forEach(attraction => {
                                 const card = document.createElement('div');
