@@ -1,0 +1,126 @@
+{
+    "destinations": [
+        {
+            "image": "pics/paris.jpg",
+            "title": "Paris",
+            "description": "As the world's best place to visit, it's no surprise that the electrifying City of Light tops this list. France's capital city is a year-round tourist destination with iconic attractions like the Louvre and the Eiffel Tower and incredible architecture (think: the dazzling Basilique du Sacré-Coeur).",
+            "attractions": [
+                {
+                    "image": "pics/louvre.jpg",
+                    "title": "Louvre Museum",
+                    "description": "The Louvre is the world's largest art museum and a historic monument in Paris, France."
+                },
+                {
+                    "image": "pics/eiffel_tower.jpg",
+                    "title": "Eiffel Tower",
+                    "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France."
+                },
+                {
+                    "image": "pics/arc-de-triomphe-paris.jpg",
+                    "title": "Arc de Triomphe",
+                    "description": "The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars."
+                }
+            ]
+        },
+        {
+            "image": "pics/nice.jpg",
+            "title": "Nice",
+            "description": "Glamorous Nice occupies a picturesque spot along the French Riviera. Beach bums and culture hounds alike will enjoy the city's pebbly shores, engaging museums, boutique shops and Baroque-style palaces.",
+            "attractions": [
+                {
+                    "image": "pics/promenade_des_anglais.jpg",
+                    "title": "Promenade des Anglais",
+                    "description": "A long, scenic boulevard along the Mediterranean Sea, ideal for strolling and people-watching."
+                },
+                {
+                    "image": "pics/Massena-Museum.jpg",
+                    "title": "Massena Museum",
+                    "description": "The Villa Masséna is located right next to the famous Negresco hotel in Nice. It houses the Massena Museum presenting the history of Nice and the region, as well as valuable memorabilia of Napoleon."
+                },
+                {
+                    "image": "pics/saint-nicolas.jpg",
+                    "title": "Saint Nicolas Cathedral",
+                    "description": "The Saint-Nicolas Cathedral in Nice is the largest Russian Orthodox church outside Russia. The impressive sacred building with the ground plan of a cross and its five domes is located in a small park on the Boulevard du Tzarévitch and is one of the most visited sights in Nice."
+                }
+            ]
+        },
+        {
+            "image": "pics/burgundy.jpg",
+            "title": "Burgundy",
+            "description": "Another popular wine region, Burgundy is home to rolling hills, superior cuisine and an array of vineyards. Those visiting Burgundy must spend time exploring the medieval villages, historical abbeys and museums that call this area home.",
+            "attractions": [
+                {
+                    "image": "pics/01b.jpg",
+                    "title": "Dijon Ducal Palace",
+                    "description": "One of Dijon’s most important historical landmarks (and included in the Historic Center of Dijon UNESCO World Heritage Site), the Dijon Ducal Palace was, for centuries, the seat of Burgundian power."
+                },
+                {
+                    "image": "pics/2b.jpg",
+                    "title": "Hospices de Beaune",
+                    "description": "A UNESCO World Heritage Site, the Hospices de Beaune (aka the Hôtel-Dieu de Beaune is one of Burgundy’s most storied buildings. Founded as a charitable hospital in 1443, the landmark is known for its turrets, colorful roof tiles, and pretty courtyards—as well as the annual wine auction it hosts."
+                }
+            ]
+        },
+        {
+            "image": "pics/toulouse.jpg",
+            "title": "Toulouse",
+            "description": "Dubbed la Ville Rose (the Pink City) due to the prominence of distinctive clay bricks in its architecture, Toulouse is a feast for the eyes. Throughout this city, which is located in the South of France, you'll find marvels like the neoclassical Le Capitole on the main square, the stately Basilica of Saint-Sernin (an 11th-century UNESCO site)",
+            "attractions": [
+                {
+                    "image": "pics/1t.jpeg",
+                    "title": "Basilica of Saint-Sernin",
+                    "description": "A Romanesque church and UNESCO World Heritage Site in Toulouse, known for its stunning architecture."
+                },
+                {
+                    "image": "pics/2t.jpeg",
+                    "title": "Couvent des Jacobins",
+                    "description": "The Church of the Jacobins is a deconsecrated Roman Catholic church located in Toulouse, France. It is a large brick building whose construction started in 1230, and whose architecture influenced the development of the Gothique méridional (Southern French Gothic) style."
+                }
+            ]
+        },
+        {
+            "image": "pics/eze.jpg",
+            "title": "Eze",
+            "description": "Located on the French Riviera about 8 miles east of Nice, the tiny hilltop village of Èze makes for an excellent day trip. The best way to spend your time in this medieval town is meandering through its cobbled streets that look as though they've been pulled from a postcard.",
+            "attractions": [
+                {
+                    "image": "pics/1e.jpg",
+                    "title": "Eze Village",
+                    "description": "A picturesque medieval village with breathtaking views of the Mediterranean."
+                }
+            ]
+        },
+        {
+            "image": "pics/lyon.jpeg",
+            "title": "Lyon",
+            "description": "While it may not be as well-known as big-name cities like Paris, Lyon competes with the best of them. Despite being the third-largest city in France, Lyon is much calmer and less touristy than other similarly sized destinations.",
+            "attractions": [
+                {
+                    "image": "pics/62.png",
+                    "title": "Basilica of Notre-Dame de Fourvière",
+                    "description": "A prominent basilica located on Fourvière Hill, offering panoramic views of Lyon."
+                }
+            ]
+        }
+    ],
+    "blogs": [
+        {
+            "image": "pics/blog1.png",
+            "title": "Fracne Travel Tips",
+            "link": "https://www.francetraveltips.com/",
+            "description": "I travel to France often and love to share insights about unique sites and experiences—those that are not always written about in tour books: active, outdoor, culinary, arts and entertainment, and learning experiences in Paris and throughout France."
+        },
+        {
+            "image": "pics/blog2.png",
+            "title": "Me ssy Nessy Chic",
+            "link": "https://www.messynessychic.com/",
+            "description": "Every summer we run into the same problem: too many amazing festivals, too little time. Then we caught wind of the long lost Delphic Festivals, which makes every concert we’ve ever been to pale in comparison to its over-the-top, 1920s interpretation of Greek merrymaking. "
+        },
+        {
+            "image": "pics/blog3.png",
+            "title": "The Provence Post",
+            "link": "https://theprovencepost.blogspot.com/",
+            "description": "Read inspiring stories and tips"
+        }
+    ]
+}
