@@ -31,6 +31,7 @@ body {
     display: flex;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') center center/cover no-repeat;
+    transition: background-color 0.5s ease;
 }
 
 .hero h1 {
@@ -45,8 +46,10 @@ body {
 }
 
 #about {
-    background-color: #f9f9f9;
+    background-color: #08affc;
     padding: 60px 0;
+    transition: background-color 0.5s ease;
+
 }
 
 #about h2 {
@@ -61,7 +64,8 @@ body {
 
 #projects {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: #48ffbf;
+    transition: background-color 0.5s ease;
 }
 
 #projects h2 {
